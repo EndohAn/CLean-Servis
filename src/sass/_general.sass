@@ -458,7 +458,6 @@ h1
         margin: auto
     &_text
         margin: 20px 0 30px 0       
-        line-height: 1.66
         span
             font-weight: 700
     &_btn
@@ -577,114 +576,113 @@ h1
     display: block
     a
         border-bottom: 1px solid  $main-color
+
+.question
+    min-height: 600px
 .accordion
     background-color:$bg-color
-    // margin-bottom: 25px
     margin: 15px 0
     color: #444
     cursor: pointer
+    font-size: 22px
     padding: 18px
     border: none
     width: 100%
     text-align: left    
     outline: none
     transition: 0.4s
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
     &:hover
-        background-color: #ccc
+        background-color: #e3eeff
     &::after
-        content: '\02795' 
-        font-size: 13px
-        color: #777
-        float: right
-        margin-left: 5px
-.active
-    &::after
-        content: '\02795' 
-        font-size: 13px
-        color: #777
-        float: right
-        margin-left: 5px 
-    &:hover
-        background-color: #ccc    
+        position: absolute
+        top: 5px
+        right: 45px
+        z-index: 5
+        flex-shrink: 0
+        width: 44px
+        height: 44px
+        margin-left: auto
+        background-image: url(../icons/question/arrow.svg)
+        background-repeat: no-repeat
+        background-size: 100%
+        content: ""       
+        transition: transform 0.2s ease-out             
+    
 
+.active
+    &::after      
+        position: absolute
+        flex-shrink: 0
+        width: 44px
+        height: 44px
+        margin-left: auto
+        background-image: url(../icons/question/arrow-hover.svg)
+        background-repeat: no-repeat
+        background-size: 100%
+        content: ""       
+        transition: transform 0.2s ease-out
+        transform: rotate(-180deg)   
+   
 .panel
     padding: 18px 0 
     background-color: white
     display: none
-    overflow: hidden
-    
-    
-    
-    
-
-//     &:last-child 
-//         margin: 0
-//     &:hover
-//         background-image: url("../icons/question/arrow.svg")
-
-
-// .accordion__item:hover .accordion__header::after {
-//   background-image: url("../img/index/questions/arrow-hover.svg");
-// }
-
-// .question__content .accordion__header {
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: flex;
-//   -webkit-box-pack: justify;
-//       -ms-flex-pack: justify;
-//           justify-content: space-between;
-//   -webkit-box-align: center;
-//       -ms-flex-align: center;
-//           align-items: center;
-//   cursor: pointer;
-//   -webkit-transition: background-color 0.2s ease-out;
-//   transition: background-color 0.2s ease-out;
-// }
-
-// .question__content .accordion__header::after {
-//   -ms-flex-negative: 0;
-//       flex-shrink: 0;
-//   width: 44px;
-//   height: 44px;
-//   margin-left: auto;
-//   background-image: url("../img/index/questions/arrow.svg");
-//   background-repeat: no-repeat;
-//   background-size: 100%;
-//   content: "";
-//   -webkit-transition: -webkit-transform 0.2s ease-out;
-//   transition: -webkit-transform 0.2s ease-out;
-//   transition: transform 0.2s ease-out;
-//   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-// }
-
-// .question__content .accordion__body {
-//   max-width: 1015px;
-// }
-
-// .question__content .accordion__body br {
-//   display: none;
-// }
-
-// .question__content .accordion__item_show .accordion__header::after,
-// .question__content .accordion__item_slidedown .accordion__header::after {
-//   -webkit-transform: rotate(-180deg);
-//       -ms-transform: rotate(-180deg);
-//           transform: rotate(-180deg);
-// }
-
-// .question__content .accordion__item:not(.accordion__item_show) .accordion__body {
-//   display: none;
-// }
-
+    max-width: 1015px
+    &_text
+        margin-left: 20px
+        
    
+    
+    
+.footer 
+    padding: 75px 0
+    background-color: $bg-color
+
+    &_block   
+        display: flex
+        justify-content: space-between
 
 
-
-
+    &_column 
   
+        align-items: flex-start
+        display: flex  
+        flex-direction: column
 
-  
-  
+
+    &_column
+        li 
+            margin-bottom: 12px
+
+    &_column
+        li
+            &:last-child 
+                margin: 0
+
+    &_column
+        li
+            a 
+                color:$main-color
+
+
+    &_politica 
+
+        transition: 0.3s ease
+        border-bottom: 1px solid transparent
+        padding: 10px 0
+
+
+    &_politica:hover 
+        color:$btn-color
+        border-bottom: 1px solid $btn-color
+
+
+
+
+
 
 
